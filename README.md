@@ -1,2 +1,2 @@
-# Sudoku-Solver-Visualiser
-I wanted to make a sudoku solver that isn't just your regular run-of-the-mill console app
+<h1 align="center">Sudoku solver visualiser</h1>
+A GLFW-based Sudoku app with a built-in solver.
