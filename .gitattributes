@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.c linguist-detectable=false
-*.objective-c linguist-detectable=false
+*.C linguist-detectable=false
+*.Objective-C linguist-detectable=false
