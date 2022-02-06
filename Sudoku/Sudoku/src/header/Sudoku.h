@@ -10,6 +10,7 @@ class Sudoku {
 public:
 	static const int GRID_SIZE = 9;
 	int board[GRID_SIZE][GRID_SIZE];
+	int initialBoard[GRID_SIZE][GRID_SIZE];
 
 private:
 
@@ -17,5 +18,6 @@ private:
 
 public:
 	Sudoku();
-	Sudoku(Difficulty);
+	Sudoku(Difficulty difficulty);
+	Sudoku(int Board[][GRID_SIZE]);
 };

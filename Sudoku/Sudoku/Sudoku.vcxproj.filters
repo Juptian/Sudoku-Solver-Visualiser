@@ -27,6 +27,12 @@
     <ClCompile Include="src\cc\utils.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\header\VertexBuffer.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cc\VertexBuffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\header\Solver.h">

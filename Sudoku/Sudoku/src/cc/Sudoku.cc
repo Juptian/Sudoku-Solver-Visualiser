@@ -1,8 +1,8 @@
+#include <iostream>
 #include <random>
 #include "../header/Sudoku.h"
 #include "../header/Difficulty.h"
 #include "../header/Solver.h"
-#include <iostream>
 
 Sudoku::Sudoku()
 	: Sudoku(Difficulty::EASY)
@@ -12,6 +12,11 @@ Sudoku::Sudoku(Difficulty difficulty)
 {
 	memset(board, 0, sizeof(board));
 	CreateBoard(difficulty);
+}
+
+Sudoku::Sudoku(int Board[][GRID_SIZE])
+{
+	memcpy(board, Board, sizeof(board));
 }
 
 void Sudoku::CreateBoard(Difficulty difficulty)
@@ -32,5 +37,6 @@ void Sudoku::CreateBoard(Difficulty difficulty)
 		while (!SudokuSolver::IsValidPlacement(board, row, column, number));
 		board[row][column] = number;
 	}
+	memcpy(initialBoard, board, sizeof(board));
 }
 

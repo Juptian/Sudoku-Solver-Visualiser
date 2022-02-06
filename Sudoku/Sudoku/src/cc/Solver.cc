@@ -3,7 +3,7 @@
 #include "../header/Sudoku.h"
 #include "../header/utils.h"
 
-bool SudokuSolver::IsValidPlacement(int board[][Sudoku::GRID_SIZE], int& row, int& column, int& number)
+bool SudokuSolver::IsValidPlacement(int board[][Sudoku::GRID_SIZE], const int row, const int column, const int number)
 {
 	return 
 		!IsInRow(board, row, number) && 
@@ -11,7 +11,7 @@ bool SudokuSolver::IsValidPlacement(int board[][Sudoku::GRID_SIZE], int& row, in
 		!IsIn3x3Square(board, row, column, number);
 }
 
-bool SudokuSolver::IsInRow(int board[][Sudoku::GRID_SIZE], int& row, int& number)
+bool SudokuSolver::IsInRow(int board[][Sudoku::GRID_SIZE], const int row, const int number)
 {
 	for (int i = 0; i < Sudoku::GRID_SIZE; i++)
 	{
@@ -23,7 +23,7 @@ bool SudokuSolver::IsInRow(int board[][Sudoku::GRID_SIZE], int& row, int& number
 	return false;
 }
 
-bool SudokuSolver::IsInColumn(int board[][Sudoku::GRID_SIZE], int& column, int& number)
+bool SudokuSolver::IsInColumn(int board[][Sudoku::GRID_SIZE], const int column, const int number)
 {
 	for (int i = 0; i < Sudoku::GRID_SIZE; i++)
 	{
@@ -35,7 +35,7 @@ bool SudokuSolver::IsInColumn(int board[][Sudoku::GRID_SIZE], int& column, int& 
 	return false;
 }
 
-bool SudokuSolver::IsIn3x3Square(int board[][Sudoku::GRID_SIZE], int& row, int& column, int& number)
+bool SudokuSolver::IsIn3x3Square(int board[][Sudoku::GRID_SIZE], const int row, const int column, const int number)
 {
 	int top_row = row - row % 3;
 	int left_column = column - column % 3;
@@ -84,7 +84,7 @@ bool SudokuSolver::FindEmptySlot(int board[][Sudoku::GRID_SIZE], int& row, int& 
 	{
 		for (column = 0; column < Sudoku::GRID_SIZE; column++)
 		{
-			if (board[row][column] == 0)
+			if (board[row][column] <= 0)
 			{
 				return true;
 			}
