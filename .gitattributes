@@ -1,4 +1,3 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-./Sudoku/Dependencies/GLFW/include/GLFW/glfw3.h -linguist-detectable
-./Sudoku/Dependencies/GLFW/include/GLFW/glfw3native.h -linguist-detectable
+./Sudoku/Dependencies/** -linguist-detectable
