@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 /Sudoku/Dependencies/** linguist-vendored
+/Sudoku/Dependencies/** linguist-documentation
